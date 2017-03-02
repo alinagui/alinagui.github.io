@@ -3,17 +3,17 @@
 <head lang="zh-CN">
     <meta charset="utf-8">
     <title>Technology | Python | python爬虫之翻译</title>
-    <link href="https://cgwh.github.io./otherpages/technology/StyleOne.css" type="text/css" rel="stylesheet">
-    <link href="https://cgwh.github.io./otherpages/technology/python/pythonpages/css/pyTranslateStyle.css" type="text/css" rel="stylesheet">
+    <link href="https://alinagui.github.io./otherpages/technology/StyleOne.css" type="text/css" rel="stylesheet">
+    <link href="https://alinagui.github.io./otherpages/technology/python/pythonpages/css/pyTranslateStyle.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <div id="div_top">
         <div id="div_top_left">
-            <div id="div_top_text1_1" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/work/work.html">Home</a></div>
+            <div id="div_top_text1_1" class="div_top_link_text"><a href="https://alinagui.github.io/otherpages/work/work.html">Home</a></div>
             <div class="div_top_link_arrow">></div>
-            <div id="div_top_text1_2" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/technology.html">Technology</a></div>
+            <div id="div_top_text1_2" class="div_top_link_text"><a href="https://alinagui.github.io/otherpages/technology/technology.html">Technology</a></div>
             <div class="div_top_link_arrow">></div>
-            <div id="div_top_text1_3" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/python/python.html">Python</a></div>
+            <div id="div_top_text1_3" class="div_top_link_text"><a href="https://alinagui.github.io/otherpages/technology/python/python.html">Python</a></div>
         </div>
         <div id="div_top_right">
             <div id="div_top_text2"><p>Python</p></div>
@@ -36,14 +36,14 @@
             <p class="p_cofont">也许有道词典有意将其翻译服务器及其数据公开,数据格式也简易明了,使得此脚本实现起来比较容易.其他的例如Google翻译,必应翻译,百度翻译都进行了对数据的保密,如果用此脚本来获取他们的翻译结果,或许有难度,但不是不可能,只要多去钻研其中的代码,必定可以成功.当然,也可以没必要用此方法,也可以直接使用他们提供的API接口来实现</p>
             <p class="p_confont">首先我们来打开有道翻译的官网,尝试进行翻译操作,ctrl+shift+i打开开发者工具来对网页进行检查,先选中工具栏中的NetWork选项(linux上一直没找到好的图片编辑软件,没标出来).在左边输入需要翻译的内容,例如这里测试输入old,之后点击"自动翻译",在下方就出现了翻译结果.当然,开发者工具中的中下方也发生变化,显示的是点击"自动翻译"后网页与翻译服务器之间的通信信息.在type栏下的第一个选项中,其值为xhr(XMLHttpRequest)的缩写,也就是通信所返回的内容等</p>
             <div class="div_img" id="div_img_1">
-                <img src="https://cgwh.github.io./otherpages/technology/res/python-pachong-1.png">
+                <img src="https://alinagui.github.io./otherpages/technology/res/python-pachong-1.png">
             </div>
             <p class="p_cnfont">其name属性为"translate?smartResult...点击其就知道其通信的详细信息,如下图:</p>
             <p class="div_img" id="div_img_2">
-                <img src="https://cgwh.github.io./otherpages/technology/res/python-pachong-2.png">
+                <img src="https://alinagui.github.io./otherpages/technology/res/python-pachong-2.png">
             </p>
             <div class="div_img" id="div_img_3">
-                <img src="https://cgwh.github.io./otherpages/technology/res/python-pachong-3.png">
+                <img src="https://alinagui.github.io./otherpages/technology/res/python-pachong-3.png">
             </div>
             <p class="p_cnfont">观察Headers选项里的信息,可以知道有道翻译的服务器的URL地址,翻译所使用的提交方式(Request Method)为POST方式,及其编码格式为"utf-8"(一般都为utf-8的编码格式)和Data中所需要的数据信息(这里的data信息很简单).这里所需要使用到的内容为:</p>
             <p class="p_enfont">*General选项里的RequestURL属性的值</p>
@@ -169,14 +169,14 @@
             </p>
             <p class="p_cnfont">运行如图:</p>
             <div class="div_img" id="div_img_4">
-                <img src="https://cgwh.github.io./otherpages/technology/res/python-pachong-4.png">
+                <img src="https://alinagui.github.io./otherpages/technology/res/python-pachong-4.png">
             </div>
             <p class="p_cnfont">代码中,url和head['Uesr-Agent']的定义可以用一行来写,不过这里考虑到一行太长,所以使用了分行来写</p>
             <p class="p_cnfont">程序中head['User-Agent']的使用是为了隐藏有脚本运行而产生的表示,若使用这个值的属性,那么在服务器中显示的就为ip地址是通过web浏览器来人工访问,而若未使用此属性,那么服务器那端所获取的则为此ip是通过python脚本来访问</p>
         </div>
     </div>
     <div id="div_container_bt">
-            <a href="https://cgwh.github.io/otherpages/technology/python/python.html">
+            <a href="https://alinagui.github.io/otherpages/technology/python/python.html">
                 <button id="bt_container_bt">返回</button>
             </a>
     </div>
