@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>Technology | Java | Foreach</title>
+    <link href="https://cgwh.github.io./otherpages/technology/StyleOne.css" type="text/css" rel="stylesheet">
+    <link href="https://cgwh.github.io/otherpages/technology/java/css/javaforeachStyle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div id="div_top">
+        <div id="div_top_left">
+            <div id="div_top_text1_1" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/work/work.html">Home</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_2" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/technology.html">Technology</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_3" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/java/java.html">Java</a></div>
+        </div>
+        <div id="div_top_right">
+            <div id="div_top_text2"><p>Java</p></div>
+            <div id="div_top_search">
+            <form>
+                <div id="div_top_search_input">
+                    <input type="text" class="input_search" name="input_search_name" placeholder="输入关键字">
+                </div>
+                <div id="div_top_search_button">
+                    <input type="submit" class="submit_search" value="搜索">
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div id="div_container">
+        <div id="div_container_center">
+            <h2 id="h2_div_right">Foreach语法</h2>
+            <p class="p_cnfont">Foreach是Java SE5引入的一种新的更加简洁的for语法,主要是为数组和容器使用.foreach的作用跟for循环一样,但使用foreach语法将不需要创建int变量去对由访问项构成的序列进行计数,foreach将自动产生每一项.它的使用语法格式如下:</p>
+            <p class="p_enfont">for(对象类型 输出值x : 对象)</p>
+            <p class="p_cnfont">如下代码:</p>
+            <p id="p_code_1" class="p_code">
+                public class ForEachFloat {
+            </p>
+            <p id="p_code_2" class="p_code">
+                public static void main(String [] args){</p>
+            <p id="p_code_3" class="p_code">
+                Random random = new Random(47);
+            </p>
+            <p id="p_code_4" class="p_code">
+                float f[] = new float[10];</p>
+            <p id="p_code_5" class="p_code">
+                for(int i = 0; i < 10; i++){
+            </p>
+            <p id="p_code_6" class="p_code">
+                f[i] = random.nextFloat();
+            </p>
+            <p id="p_code_7" class="p_code">}</p>
+            <p id="p_code_8" class="p_code">
+                for(float x : f){
+            </p>
+            <p id="p_code_9" class="p_code">
+                System.out.println(x);
+            </p>
+            <p id="p_code_10" class="p_code">}</p>
+            <p id="p_code_26" class="p_code">
+                System.out.println();
+            </p>
+            <p id="p_code_11" class="p_code">
+                TextVector textVector = new TextVector();
+            </p>
+            <p id="p_code_12" class="p_code">
+                textVector.showVector();
+            </p>
+            <p id="p_code_13" class="p_code">}</p>
+            <p id="p_code_14" class="p_code">}</p>
+            
+            <p id="p_code_15" class="p_code">class TextVector{</p>
+            <p id="p_code_16" class="p_code">
+                Vector&lt;Object> vector = new Vector&lt;Object>();
+            </p>
+            <p id="p_code_17" class="p_code">
+                public void showVector(){</p>
+            <p id="p_code_18" class="p_code">
+                for(int i = 1; i <= 5; i++){</p>
+            <p id="p_code_19" class="p_code">
+                vector.add(i * 10);</p>
+            <p id="p_code_20" class="p_code">}</p>
+            <p id="p_code_21" class="p_code">}</p>
+            <p id="p_code_22" class="p_code">
+                for(Object x : vector){</p>
+            <p id="p_code_23" class="p_code">
+                System.out.println(x);</p>
+            <p id="p_code_24" class="p_code">}</p>
+            <p id="p_code_25" class="p_code">}</p>
+            <p id="p_code_output" class="p_code">Output:</p>
+            <p id="p_code_output_1" class="p_code">
+                0.72711575---0.39982635---0.5309454---0.0534122---0.16020656---
+            </p>
+            <p id="p_code_output_1" class="p_code">
+                10---20---30---40---50---
+            </p>
+            <p class="p_cnfont">*</p>
+            <p class="p_cnfont">程序中Random random = new Random(47)中的47作为种子,是伪随机数生成器的内部状态的初始值，随机产生的数字随着种子的改变而改变也就是使用了种子的随机数生成器其random对象在每一次运行程序时产生的数值都相同，而Random random = new Random()这中创建对象可以认为是默认使用时间作为种子.</p>
+            <p class="p_cnfont">代码中同样也使用了vector集合来测试foreach,这当然是可以的.ArrayList同样也行,说到ArrayList,可以为此注意的是,ArraList是Vector的新版,Vector是在Java1.0中就已经存在的,而ArrayList则是在Java1.2的时候出来的.相比较,ArrayList较新,但个人认为ArrayList并不是特别好.因为ArrayList不安全,虽然它速度快.而Vector安全,实在.所以一般用Vector,,,
+            </p>
+            <p class="p_bottom_cnfont">再看程序,代码:for(float x : f)这条语句定义了一个float类型的变量x,继而将每一个f的元素赋值给x.Java中任何返回一个数组的方法都可以使用foreach,例如String类型的常量使用了toCharray()后返回一个char数组,这个时候就可以使用foreach方法来输出打印其中的字符了
+            </p>
+        </div>
+    </div>
+    <div id="div_container_bt">
+            <a href="https://cgwh.github.io/otherpages/technology/java/java.html">
+                <button id="bt_container_bt">返回</button>
+            </a>
+    </div>
+</body>
+</html>

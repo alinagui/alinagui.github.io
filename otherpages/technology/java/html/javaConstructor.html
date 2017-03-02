@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>Technology | Java | 构造器</title>
+    <link href="https://cgwh.github.io./otherpages/technology/StyleOne.css" type="text/css" rel="stylesheet">
+    <link href="https://cgwh.github.io/otherpages/technology/java/css/javaConstructorStyle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div id="div_top">
+        <div id="div_top_left">
+            <div id="div_top_text1_1" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/work/work.html">Home</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_2" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/technology.html">Technology</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_3" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/java/java.html">Java</a></div>
+        </div>
+        <div id="div_top_right">
+            <div id="div_top_text2"><p>Java</p></div>
+            <div id="div_top_search">
+            <form>
+                <div id="div_top_search_input">
+                    <input type="text" class="input_search" name="input_search_name" placeholder="输入关键字">
+                </div>
+                <div id="div_top_search_button">
+                    <input type="submit" class="submit_search" value="搜索">
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div id="div_container">
+        <div id="div_container_center">
+            <h3 id="h2_div_container">Java构造器</h3>
+            <p class="p_cnfont">C++中最先引入了构造器的概念,这是一个在创建对象时被自动调用的特殊方法.Java中也采用了构造器,并额外提供了"垃圾回收器",在Java中,通过提供构造器,类的设计者可确保每个对象都得到初始化.创建对象是,如果其类具有构造器,Java就会在用户有能力操作对象之前自动调用相应的构造器,从而保证了初始化的进行.</p>
+            <p class="p_cnfont">构造器的命名方式:</p>
+            <p class="p_enfont">类名(){};</p>
+            <p class="p_cnfont">以下就是一个带有构造器的简单类:</p>
+            <p id="p_code_1" class="p_code">
+                public class  FirstTest{
+            </p>
+            <p id="p_code_2" class="p_code">
+                public static void main(String [] args){
+            </p>
+            <p id="p_code_3" class="p_code">
+                for(int i = 0; i < 5; i++){
+            </p>
+            <p id="p_code_4" class="p_code">new Rock();</p>
+            <p id="p_code_5" class="p_code">}</p>
+            <p id="p_code_6" class="p_code">}</p>
+            <p id="p_code_7" class="p_code">}</p>
+            <p id="p_code_8" class="p_code">class Rock{</p>
+            <p id="p_code_9" class="p_code">Rock(){</p>
+            <p id="p_code_10" class="p_code">
+                System.out.print("Rock" + " ");
+            </p>
+            <p id="p_code_11" class="p_code">}</p>
+            <p id="p_code_12" class="p_code">}</p>
+            <p class="p_cnfont">Output:</p>
+            <p id="p_output_1" class="p_code">
+                Rock Rock Rock Rock Rock 
+            </p>
+            <p class="p_cnfont">如上面的代码,在创建对象时:</p>
+            <p class="p_enfont">new Rock();</p>
+            <p class="p_cnfont">将会为对象分配储存空间,并调用相应的构造器,这就确保了在你能操作对象之前,它已经被恰当地初始化了.</p>
+            <p class="p_cnfont">值得注意的是,由于构造器的名称必须和类型相同,所以"每个方法的首字母必须小写"的编码分格并不适合构造器了</p>
+            <p class="p_cnfont">无参数的构造器叫做默认构造器,在如果你没自定义构造器时,java在编译时会自动创建默认构造器.没有它的话,就没有方法可调用,就无法创建对象.但是,如果已经定义了一个构造器(无论是否有参数),编译器就不会帮你自动创建默认构造器</p>
+        </div>
+    </div>
+    <div id="div_container_bt">
+            <a href="https://cgwh.github.io/otherpages/technology/java/java.html">
+                <button id="bt_container_bt">返回</button>
+            </a>
+    </div>
+</body>
+</html>

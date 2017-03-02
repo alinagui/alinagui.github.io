@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>Technology | Java | Continue,break和跳转标签</title>
+    <link href="https://cgwh.github.io./otherpages/technology/StyleOne.css" type="text/css" rel="stylesheet">
+    <link href="https://cgwh.github.io/otherpages/technology/java/css/javaContinueStyle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div id="div_top">
+        <div id="div_top_left">
+            <div id="div_top_text1_1" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/work/work.html">Home</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_2" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/technology.html">Technology</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_3" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/java/java.html">Java</a></div>
+        </div>
+        <div id="div_top_right">
+            <div id="div_top_text2"><p>Java</p></div>
+            <div id="div_top_search">
+            <form>
+                <div id="div_top_search_input">
+                    <input type="text" class="input_search" name="input_search_name" placeholder="输入关键字">
+                </div>
+                <div id="div_top_search_button">
+                    <input type="submit" class="submit_search" value="搜索">
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div id="div_container">
+        <div id="div_container_center">
+            <h3 id="h2_div_right">Continue,break和跳转标签</h3>
+            <p class="p_cnfont">在任何迭代语句的主体部分,都可用break和continue控制循环的流程.其中,break用于强行退出循环,不执行循环中剩余的语句.而continue则停止执行当前的迭代,然后退回到循环的起点,开始下一次迭代.</p>
+<!--            <p class="p_enfont"></p>-->
+            <p class="p_cnfont">如下代码:</p>
+            <p id="p_code_1" class="p_code">
+                public class BreakContinue {</p>
+            <p id="p_code_2" class="p_code">
+                public static void main(String [] args){</p>
+            <p id="p_code_3" class="p_code">
+                new Test().forbreakTest();</p>
+            <p id="p_code_4" class="p_code">}</p>
+            <p id="p_code_5" class="p_code">}</p>
+            <p id="p_code_6" class="p_code">class Test{</p>
+            <p id="p_code_7" class="p_code">
+                public void forbreakTest(){</p>
+            <p id="p_code_8" class="p_code">
+                for(int i = 0; i < 10; i++){</p>
+            <p id="p_code_9" class="p_code">
+                System.out.print("i = " + i + ",");</p>
+            <p id="p_code_10" class="p_code">
+                if(i == 2){</p>
+            <p id="p_code_21" class="p_code">
+                System.out.println();</p>
+            <p id="p_code_11" class="p_code">
+                System.out.println("i == 2,执行continue,结束本次循环,进入i=3循环");</p>
+            <p id="p_code_12" class="p_code">continue;</p>
+            <p id="p_code_13" class="p_code">}</p>
+            <p id="p_code_14" class="p_code">if(i == 7){</p>
+            <p id="p_code_22" class="p_code">
+                System.out.println();</p>
+            <p id="p_code_15" class="p_code">
+                System.out.println("i == 7,执行break,结束整个for循环");</p>
+            <p id="p_code_16" class="p_code">break;</p>
+            <p id="p_code_17" class="p_code">}</p>
+            <p id="p_code_18" class="p_code">}</p>
+            <p id="p_code_19" class="p_code">}</p>
+            <p id="p_code_20" class="p_code">}</p>
+            
+            <p id="p_code_output" class="p_code">Output:</p>
+            <p id="p_code_output_1" class="p_code">i = 0,i = 1,i = 2,</p>
+            <p id="p_code_output_2" class="p_code">
+                i == 2,执行continue,结束本次循环,进入i=3循环</p>
+            <p id="p_code_output_3" class="p_code">
+                i = 3,i = 4,i = 5,i = 6,i = 7,
+            </p>
+            <p id="p_code_output_4" class="p_code">
+                 i == 7,执行break,结束整个for循环</p>
+                 
+            <p class="p_cnfont">首先,无穷循环有两种形式:while(true)和for(;;),为了解break和continue的运行过程的差别,例如程序中的forbreakTest()方法在当i == 2时，程序输出打印后，执行continue语句，在结束本次循环前,会先执行for循环中的条件语句i++，之后在结束本次循环而break则不同，在当i == 7时，程序输出打印后，执行break语句，结束所有循环，for循环中的条件语句i++会未被执行，直接结束
+            </p>
+            <p class="p_cnfont">Java中除了break和continue关键字来中断循环,还有另一种中断迭代语句的方法,但依然跟break和continue这两个关键字有关----标签.标签是后面跟有冒号的表示符,就像下面这样:</p>
+            <p class="p_enfont">label1:</p>
+            <p class="p_cnfont">在Java中,标签起作用的唯一的地方刚好是在迭代语句之前,它的位置跟迭代语句的位置,其两者之间最好是不会有其他语句的.break和continue关键字通常只是中断当前循环,但若随同标签一起使用,它们就会中断循环,知道标签所在的地方,例如:</p>
+            <p class="p_cnfont">如下代码:</p>
+            <p id="p_code_2_1" class="p_code">public class LabelTest {</p>
+            <p id="p_code_2_2" class="p_code">
+                public static void main(String [] args){
+            </p>
+            <p id="p_code_2_3" class="p_code">int i = 0;</p>
+            <p id="p_code_2_4" class="p_code">outer:</p>
+            <p id="p_code_2_5" class="p_code">for(;;){</p>
+            <p id="p_code_2_6" class="p_code">inner:</p>
+            <p id="p_code_2_7" class="p_code">for(; i < 10; i++){</p>
+            <p id="p_code_2_8" class="p_code">
+                System.out.println("开始i = " + i + "循环");
+            </p>
+            <p id="p_code_2_9" class="p_code">if(i == 2){</p>
+            <p id="p_code_2_10" class="p_code">
+                System.out.println("i == 2,执行continue,将执行i=３循环......");
+            </p>
+            <p id="p_code_2_11" class="p_code">continue;</p>
+            <p id="p_code_2_12" class="p_code">}</p>
+            <p id="p_code_2_13" class="p_code">if(i == 3){</p>
+            <p id="p_code_2_14" class="p_code">
+                System.out.println("i == 3,执行break,不执行后面的for(k)循环,直接进入for(i)的i=4循环......");
+            </p>
+            <p id="p_code_2_15" class="p_code">i++;</p>
+            <p id="p_code_2_16" class="p_code">
+                System.out.println("此时i的值为" + i);
+            </p>
+            <p id="p_code_2_17" class="p_code">break;</p>
+            <p id="p_code_2_18" class="p_code">}</p>
+            <p id="p_code_2_19" class="p_code">if(i == 5){</p>
+            <p id="p_code_2_20" class="p_code">
+                System.out.println("i == 5，执行continue outer，回到outer标签,从最外层for(;;)循环开始,将执行i=6循环......");
+            </p>
+            <p id="p_code_2_21" class="p_code">i++;</p>
+            <p id="p_code_2_22" class="p_code">continue outer;</p>
+            <p id="p_code_2_23" class="p_code">}</p>
+            <p id="p_code_2_24" class="p_code">if(i == 9){</p>
+            <p id="p_code_2_25" class="p_code">
+                System.out.println("i == 9，执行break outer,终止所有循环,程序结束");
+            </p>
+            <p id="p_code_2_26" class="p_code">break outer;</p>
+            <p id="p_code_2_27" class="p_code">}</p>
+            <p id="p_code_2_28" class="p_code">
+                for(int k = 0; k < 5; k++){
+            </p>
+            <p id="p_code_2_29" class="p_code">if(k == 3){</p>
+            <p id="p_code_2_30" class="p_code">
+                System.out.println("i = " + i + "的循环," + "k从０开始，k == 3－＞执行continue inner,回到inner处,从for(i)循环,将执行i = " + (i + 1) + "循环......");
+            </p>
+            <p id="p_code_2_31" class="p_code">continue inner;</p>
+            <p id="p_code_2_32" class="p_code">}</p>
+            <p id="p_code_2_33" class="p_code">}</p>
+            <p id="p_code_2_34" class="p_code">}</p>
+            <p id="p_code_2_35" class="p_code">}</p>
+            <p id="p_code_2_36" class="p_code">}</p>
+            <p id="p_code_2_37" class="p_code">}</p>
+            <p id="p_output_2_1" class="p_code">Output:</p>
+            <p class="p_code_output">开始i = 0循环</p>
+            <p class="p_code_output">
+                i = 0的循环,k从０开始，k == 3－＞执行continue inner,回到inner处,从for(i)循环,将执行i = 1循环......
+            </p>
+            <p class="p_code_output">开始i = 1循环</p>
+            <p class="p_code_output">
+                i = 1的循环,k从０开始，k == 3－＞执行continue inner,回到inner处,从for(i)循环,将执行i = 2循环......
+            </p>
+            <p class="p_code_output">开始i = 2循环</p>
+            <p class="p_code_output">i == 2,执行continue,将执行i=３循环......</p>
+            <p class="p_code_output">开始i = 3循环</p>
+            <p class="p_code_output">
+                i == 3,执行break,不执行后面的for(k)循环,直接进入for(i)的i=4循环......
+            </p>
+            <p class="p_code_output">此时i的值为4</p>
+            <p class="p_code_output">开始i = 4循环</p>
+            <p class="p_code_output">
+                i = 4的循环,k从０开始，k == 3－＞执行continue inner,回到inner处,从for(i)循环,将执行i = 5循环......
+            </p>
+            <p class="p_code_output">开始i = 5循环</p>
+            <p class="p_code_output">
+                i == 5，执行continue outer，回到outer标签,从最外层for(;;)循环开始,将执行i=6循环......
+            </p>
+            <p class="p_code_output">开始i = 6循环</p>
+            <p class="p_code_output">
+                i = 6的循环,k从０开始，k == 3－＞执行continue inner,回到inner处,从for(i)循环,将执行i = 7循环......
+            </p>
+            <p class="p_code_output">开始i = 7循环</p>
+            <p class="p_code_output">
+                i = 7的循环,k从０开始，k == 3－＞执行continue inner,回到inner处,从for(i)循环,将执行i = 8循环......
+            </p>
+            <p class="p_code_output">开始i = 8循环</p>
+            <p class="p_code_output">
+                i = 8的循环,k从０开始，k == 3－＞执行continue inner,回到inner处,从for(i)循环,将执行i = 9循环......
+            </p>
+            <p class="p_code_output">开始i = 9循环</p>
+            <p class="p_code_output">
+                i == 9，执行break outer,终止所有循环,程序结束
+            </p>
+            <p class="p_cnfont">*</p>
+            <p class="p_cnfont">认真读上面的两段代码,并进行分析.</p>
+            <p class="p_cnfont">break:终端内部迭代，回到外部迭代</p>
+            <p class="p_cnfont">continue：使执行点移到内部迭代的起始处</p>
+            <p class="p_cnfont">continue label：同时中断内部迭代以及外部迭代，直接转到label处在执行，实际上是继续迭代过程，但却从外部迭代开始</p>
+            <p class="p_cnfont">break label：中断所有迭代，并回到label处，但并不重新进入迭代，也就是说，是完全终止了两个迭代</p>
+            <p class="p_cnfont">再之,所有的对比都是建立在for循环条件中i++之前的i值，而不是i++后的值.continue label语句执行后，也会如同break语句一样，跳过for循环里的i++，</p>
+            <p class="p_cnfont">重点:在java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue</p>
+        </div>
+    </div>
+    <div id="div_container_bt">
+            <a href="https://cgwh.github.io/otherpages/technology/java/java.html">
+                <button id="bt_container_bt">返回</button>
+            </a>
+    </div>
+</body>
+</html>

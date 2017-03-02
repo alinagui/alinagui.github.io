@@ -1,0 +1,110 @@
+body{
+    height: 3280px;
+}
+#div_container{
+    height: 94%;
+   
+}
+
+#div_top_text1_1{
+    width: 30px;
+/*    background-color: green;*/
+    margin-left: 10%;
+}
+#div_top_text1_2{
+    width: 60px;
+}
+#div_top_text1_3{
+    width: 26px;
+}
+
+
+#div_container_bt{
+    height: 6%;
+}
+#bt_container_bt{
+    height: 21%;
+    margin-top: 3.8%;
+}
+
+
+.p_cnfont{
+    font-size: 90%;
+    margin-top: 0.7%;
+    letter-spacing: 0.8px;
+}
+.p_enfont{
+    font-size: 90%;
+    text-indent: 5%;
+}    
+.p_code{
+    font-size: 85%;
+}
+#p_code_1,#p_code_5,#p_code_6,#p_code_20{
+    text-indent: 28%;
+}
+#p_code_2,#p_code_4,#p_code_7,#p_code_19{
+    text-indent: 30%;
+}
+#p_code_3,#p_code_8,#p_code_18{
+    text-indent: 32%;
+}
+#p_code_9,#p_code_10,#p_code_13,#p_code_14,#p_code_17{
+    text-indent: 34%;
+}
+#p_code_11,#p_code_12,#p_code_15,#p_code_16,#p_code_21,#p_code_22{
+    text-indent: 36%;
+}
+#p_code_output_1,#p_code_output_2,#p_code_output_3,#p_code_output_4{
+    text-indent: 5%;
+}
+
+
+#p_code_2_1,#p_code_2_37{
+    text-indent: 11%;
+}
+#p_code_2_2,#p_code_2_36{
+    text-indent: 13%;
+}
+#p_code_2_3,#p_code_2_4{
+    text-indent: 15%;
+}
+#p_code_2_5,#p_code_2_35{
+    text-indent: 17%;
+}
+#p_code_2_6{
+    text-indent: 19%;
+}
+#p_code_2_7,#p_code_2_34{
+    text-indent: 21%;
+}
+#p_code_2_8,#p_code_2_9,#p_code_2_12,#p_code_2_13,#p_code_2_18,
+#p_code_2_19,#p_code_2_23,#p_code_2_24,#p_code_2_27,#p_code_2_28,
+#p_code_2_33{
+    text-indent: 23%;
+}
+#p_code_2_10,#p_code_2_11,#p_code_2_14,#p_code_2_15,#p_code_2_16,
+#p_code_2_17,#p_code_2_20,#p_code_2_21,#p_code_2_22,#p_code_2_25,
+#p_code_2_26,#p_code_2_29,#p_code_2_32{
+    text-indent: 25%;
+}
+#p_code_2_30,#p_code_2_31{
+    text-indent: 27%;
+}
+#p_output_2_1{
+    text-indent: 1%;
+}
+.p_code_output{
+    font-size: 85%;
+    text-indent: 6%;
+}
+
+/*
+#p_code_2_1{
+    text-indent: 28%;
+}
+#p_code_2_2{
+    text-indent: 31%;
+}
+*/
+

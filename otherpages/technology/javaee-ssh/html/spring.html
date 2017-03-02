@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>Technology | JavaEE-SSH | Spring</title>
+    <link href="https://cgwh.github.io./otherpages/technology/StyleOne.css" type="text/css" rel="stylesheet">
+    <link href="https://cgwh.github.io./otherpages/technology/javaee-ssh/css/springStyle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div id="div_top">
+        <div id="div_top_left">
+            <div id="div_top_text1_1" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/work/work.html">Home</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_2" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/technology.html">Technology</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_3" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/javaee-ssh/javaee-ssh.html">JavaEE-SSH</a></div>
+        </div>
+        <div id="div_top_right">
+            <div id="div_top_text2"><p>Spring</p></div>
+            <div id="div_top_search">
+            <form>
+                <div id="div_top_search_input">
+                    <input type="text" class="input_search" name="input_search_name" placeholder="输入关键字">
+                </div>
+                <div id="div_top_search_button">
+                    <input type="submit" class="submit_search" value="搜索">
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div id="div_container">
+        <div id="div_container_center">
+            <h2 id="h2_div_right">Spring概况</h2>
+            <p class="p_cnfont">Spring是一个轻量级控制反转(IOC)和面向切面(AOP)的容器框架,它主要是为了解决企业应用开发的复杂性而诞生的.Spring提供一个简易的开发方式,这种开发方式将避免那些可能致使底层代码变得繁杂混乱的大量的属性文件和帮助类.其关键特性如下:</p>
+            <p class="p_enfont">*强大的基于JavaBean的采用控制反转(Inversion of Control,IOC)原则的配置管理,使得应用程序的组建更加快捷简易</p>
+            <p class="p_enfont">*一个可用于从Applet到Java EE等不同运行环境的核心Bean工厂</p>
+            <p class="p_enfont">*以资源管理器,DAO实现和事务策略等形式与Hibernate,JDO和iBATIS SQL Maps集成.</p>
+            <p class="p_enfont">*数据库事务的一般化抽象层,允许声明事务管理器,简化事务的划分使之与底层无关</p>
+            <p class="p_enfont">*提供诸如事务管理等服务的面向切面编程框架</p>
+            <p class="p_enfont">*JDBC抽象层提供了有针对性的异常等级(不再从SQL异常中提取原始代码),简化了错误处理,极大程度的减少了程序员的编码量</p>
+            <p class="p_cnfont">Spring框架是一个轻量级的Java开发框架.框架的主要优势之一就是其灵活的分层架构,同事为J2EE应用程序开发提供集成的框架.Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情.然而,Spring的用途不仅局限于服务器端的开发,任何Java应用都可以从Spring的简单,可测试和松耦合等特征中受益.</p>
+            <p class="p_enfont">目的:是为了解决JavaEE在企业应用开发中的复杂性</p>
+            <p class="p_enfont">功能:使用基本的JavaBean代替EJB</p>
+            <p class="p_enfont">范围:任何Java应用</p>
+            <p class="p_enfont">Spring特点:</p>
+            <p class="p_reenfont">*轻量:Spring的开销是非常小的,而且是非侵入式的,也就是说基于Spring开发的系统中的对象一般不依赖于Spring</p>
+            <p class="p_reenfont">*控制反转:Spring提倡使用控制反转(IOC)来实现耦合.当需要某个类的对象时,被动地从Spring的容器中得到,而不是通过new来实例化对象</p>
+            <p class="p_reenfont">*面向切面:将业务逻辑从系统服务(如事务和日志)中分离出来,系统对象只需要做它们该做的事,即业务逻辑,而不需要关心其他的问题</p>
+            <p class="p_reenfont">*容器:Spring是一个容器,它包含并管理系统对象的生命周期和配置</p>
+            <p class="p_reenfont">*框架:Spring可以使用简单的组件配置组合出复杂的应用.在Spring中,系统对象是通过xml文件配置组合起来的.并且Spring提供了很多基础设施(事务处理,持久层集成等),让开发者专注于业务逻辑的开发</p>
+            <p class="p_enfont">Spring框架结构:</p>
+            <p class="p_reenfont">Spring框架由7个模块组成,如下图所示,从整体上看,这7个模块提供了企业级开发应用系统所需要的一切,但是不一定所有模块都必须使用,开发者可以自由选择所需要的模块</p>
+            <div id="div_img">
+                <img src="https://cgwh.github.io./otherpages/technology/res/Spring-jiagou.png">
+            </div>
+            <p class="p_cnfont">Spring之IOC</p>
+            <p class="p_enfont">浅谈IOC:</p>
+            <p class="p_reenfont">IOC(Inversion of Control,控制反转)是spring的核心,贯穿始终.所谓IOC,对于spring框架来说,就是有spring来负责控制对象的生命周期和对象间的关系.在IOC开发模式中,IOC容器来安排对象之前的依赖,而在传统的开发模式中,类的对象之间都是属于相互依赖的</p>
+            <p class="p_recnfont">IOC的另外的名字叫做依赖注入(Dependency Injection),所谓的依赖注入,就是由IOC容器在运行期间,动态的将某种依赖关系注入到对象之中.所以,依赖注入(DI)和控制反转(IOC)是从不同的角度来描述同一件事情,就是指通过引入IOC容器,利用依赖关系注入的方式,实现对象之间的解耦.</p>
+            <p class="p_enfont">IOC的好处:</p>
+            <p class="p_reenfont">IOC在编程过程中不会对业务对象构成很强的侵入性,使用IOC之后,对象具有更好的可实行性,可重用性和可扩展性</p>
+            <p class="p_reenfont">降低组件之间的耦合度</p>
+            <p class="p_reenfont">提高开发效率和产品质量</p>
+            <p class="p_reenfont">统一标准,提高模块的复用性</p>
+            <p class="p_reenfont">模块具有热插拔特性</p>
+            <p class="p_enfont">IOC通俗的理解如下:</p>
+            <p class="p_reenfont">IOC控制反转:说的是创建对象实例的控制权从代码控制剥离到IOC容器控制,实际上就是你在xml文件控制,侧重于原理</p>
+            <p class="p_reenfont">DI依赖注入:说的就是在创建对象实例时,为这个对象注入属性值或其他对象实例,侧重于实现类型</p>
+            <p class="p_enfont">依赖注入有3种实现,入下所列.Spring支持后面两种:</p>
+            <p class="p_reenfont"><a href="">1.接口注入</a></p>
+            <p class="p_reenfont"><a href="">2.构造函数注入</a></p>
+            <p class="p_reenfont"><a href="">3.Setter注入</a></p>
+            <p class="p_cnfont">Spring之AOP</p>
+            <p class="p_enfont">AOP的基本概念:</p>
+            <p class="p_reenfont">面向切面的编程思想</p>
+            <p class="p_reenfont">AOP专门用于处理系统中分布于各个模块中的交叉关注点的问题,在Java EE应用中,常常通过AOP来处理一些具有横切性质的系统级服务,如事务管理,安全检查,缓存,对象池管理等,AOP已经成为一种非常常用的解决方案</p>
+            <p class="p_reenfont">AOP是对OOP(面向对象)的一种有益的补充,同事AOP是OOP的延续</p>
+            <p class="p_reenfont">OOP面向静态的领域</p>
+            <p class="p_reenfont">AOP面向动态的领域</p>
+            <p class="p_enfont">那么为什么要用到AOP呢,-----因为由于系统会有很多不同的组件,每一个组件负责一块特定的功能,然而,我们需要每一个组件只关心它的自身核心功能,但在系统中,会有一些组件比如日志模块,事务管理模块和安全模块等等这些组件,会比较频繁的融入到其他的核心业务逻辑组件当中去,这些常用组件会分散到其他多个组件当中,这样会带来的麻烦是,如果这些常用的服务组件经常发生变化,那么我们需要在多个组件中去修改,这些组件因为插入了于自身业务无关的代码而变得很混乱</p>
+            <p class="p_enfont">AOP代理其实是有AOP框架动态生成的一个对象,该对象可作为目标对象使用</p>
+            <p class="p_enfont">AOP通俗的理解:</p>
+            <p class="p_reenfont">一个组件A,不关心其他常用的服务组件B,但是这个组件A使用组件B的时候,不是组件A自身去调用,而是通过配置等其他方式,比如Spring中可以通过xml配置文件.这样就使得A压根就不需要知道服务组件B是怎样的,爱存在不存在,爱怎么存在都于A无关,A只关心自己的业务逻辑,具体A使用B的时候,配置文件去做,于具体的A组件无关</p>
+            <p class="p_enfont">在了解理论之后,还是需要赶紧去实践下,例如:<a href="https://cgwh.github.io/otherpages/technology/javaee-ssh/html/spring-helloworld.html">基于Spring的HelloWorld</a>毕竟高手们的技能永远是强大的学习能力+饱满的热情与积极性+没有拖延的实践精神+拓展的知识面与技能树+解决问的方法论</p>
+        </div>
+    </div>
+    <div id="div_container_bt">
+            <a href="https://cgwh.github.io/otherpages/technology/javaee-ssh/javaee-ssh.html">
+                <button id="bt_container_bt"><p id="p_container_bt_text">返回</p></button>
+            </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>Technology | Java | 三元操作符</title>
+    <link href="https://cgwh.github.io./otherpages/technology/StyleOne.css" type="text/css" rel="stylesheet">
+    <link href="https://cgwh.github.io/otherpages/technology/java/css/javaTernaryIfElseStyle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div id="div_top">
+        <div id="div_top_left">
+            <div id="div_top_text1_1" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/work/work.html">Home</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_2" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/technology.html">Technology</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_3" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/java/java.html">Java</a></div>
+        </div>
+        <div id="div_top_right">
+            <div id="div_top_text2"><p>Java</p></div>
+            <div id="div_top_search">
+            <form>
+                <div id="div_top_search_input">
+                    <input type="text" class="input_search" name="input_search_name" placeholder="输入关键字">
+                </div>
+                <div id="div_top_search_button">
+                    <input type="submit" class="submit_search" value="搜索">
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div id="div_container">
+        <div id="div_container_center">
+            <h2 id="h2_div_right">三元操作符if-else</h2>
+            <p class="p_cnfont">三元操作符也称为条件操作符,它显得比较独特,因为它有三个操作数;但它确实属于操作符的一种,因为它最终也会生成一个值.其表达式采取的形式如下:</p>
+            <p class="p_enfont">boolean-exp ? value1 : value2</p>
+            <p class="p_cnfont">如果boolean-exp(布尔表达式)的结果为true,则表达式所产生的值就为value1,如果boolean-exp的结果为false,值就计算为value2.
+            <br/>当然,如果需要达成这中需求这也可以用普通的if-else语句,但if-else语句相对于三元操作符来说,if-else显得相对复杂,三元操作符则更为简洁.C语言中也有三元操作符,作为古老的编程语言,三元操作符就是C发明出来的,C引以为傲的就是它是一种简练的语言,而且三元操作符的引入多半就是为了体现这种高效的编程,但假如你打算频繁的使用它,那还得三思而后行,因为三元操作符使用多了很容易产生可读性极差的代码.</p>
+            <p class="p_cnfont">如下代码:</p>
+            <p id="p_code_1" class="p_code">
+                public class TernaryOperatorTest {</p>
+            <p id="p_code_2" class="p_code">
+                public static void main(String [] args){</p>
+            <p id="p_code_3" class="p_code">
+                System.out.println(standardMethod(9));</p>
+            <p id="p_code_4" class="p_code">
+                System.out.println(ternaryMethod(10));</p>
+            <p id="p_code_5" class="p_code">
+                System.out.println(standardMethod(9));</p>
+            <p id="p_code_6" class="p_code">}</p>
+            <p id="p_code_7" class="p_code">
+                static int ternaryMethod(int i){</p>
+            <p id="p_code_8" class="p_code">
+                return i < 10 ? i * 100 : i * 10;</p>
+            <p id="p_code_9" class="p_code">}</p>
+            <p id="p_code_10" class="p_code">
+                static int standardMethod(int i){</p>
+            <p id="p_code_11" class="p_code">if(i < 10){</p>
+            <p id="p_code_12" class="p_code">return i * 100;</p>
+            <p id="p_code_13" class="p_code">}else{</p>
+            <p id="p_code_14" class="p_code">return i * 10;</p>
+            <p id="p_code_15" class="p_code">}</p>
+            <p id="p_code_16" class="p_code">}</p>
+            <p id="p_code_17" class="p_code">}</p>
+            <p id="p_code_output" class="p_code">Output:</p>
+            <p id="p_code_output_1" class="p_code">900</p>
+            <p id="p_code_output_2" class="p_code">100</p>
+            <p id="p_code_output_3" class="p_code">900</p>
+            <p class="p_cnfont">*</p>
+            <p class="p_cnfont">通过上面的代码,可以看出,使用了三元操作符的方法ternarMethod()显得更紧凑,方法块更简练.而使用了普通if-else语句的方法standardMethod()则更容易理解,而且不需要太多的录入.所以在选择使用三元操作符时,需要仔细考虑.</p>
+        </div>
+    </div>
+    <div id="div_container_bt">
+            <a href="https://cgwh.github.io/otherpages/technology/java/java.html">
+                <button id="bt_container_bt">返回</button>
+            </a>
+    </div>
+</body>
+</html>

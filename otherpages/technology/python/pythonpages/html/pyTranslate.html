@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>Technology | Python | python爬虫之翻译</title>
+    <link href="https://cgwh.github.io./otherpages/technology/StyleOne.css" type="text/css" rel="stylesheet">
+    <link href="https://cgwh.github.io./otherpages/technology/python/pythonpages/css/pyTranslateStyle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div id="div_top">
+        <div id="div_top_left">
+            <div id="div_top_text1_1" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/work/work.html">Home</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_2" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/technology.html">Technology</a></div>
+            <div class="div_top_link_arrow">></div>
+            <div id="div_top_text1_3" class="div_top_link_text"><a href="https://cgwh.github.io/otherpages/technology/python/python.html">Python</a></div>
+        </div>
+        <div id="div_top_right">
+            <div id="div_top_text2"><p>Python</p></div>
+            <div id="div_top_search">
+            <form>
+                <div id="div_top_search_input">
+                    <input type="text" class="input_search" name="input_search_name" placeholder="输入关键字">
+                </div>
+                <div id="div_top_search_button">
+                    <input type="submit" class="submit_search" value="搜索">
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div id="div_container">
+        <div id="div_container_center">
+            <h3 id="h2_div_right">Python3爬虫---有道翻译</h3>
+            <p class="p_cnfont">此脚本用来实现翻译功能,其原理很简单,就是利用有道翻译的服务器,将需要翻译的内容传入服务器,之后获取服务器返回的翻译结果</p>
+            <p class="p_cofont">也许有道词典有意将其翻译服务器及其数据公开,数据格式也简易明了,使得此脚本实现起来比较容易.其他的例如Google翻译,必应翻译,百度翻译都进行了对数据的保密,如果用此脚本来获取他们的翻译结果,或许有难度,但不是不可能,只要多去钻研其中的代码,必定可以成功.当然,也可以没必要用此方法,也可以直接使用他们提供的API接口来实现</p>
+            <p class="p_confont">首先我们来打开有道翻译的官网,尝试进行翻译操作,ctrl+shift+i打开开发者工具来对网页进行检查,先选中工具栏中的NetWork选项(linux上一直没找到好的图片编辑软件,没标出来).在左边输入需要翻译的内容,例如这里测试输入old,之后点击"自动翻译",在下方就出现了翻译结果.当然,开发者工具中的中下方也发生变化,显示的是点击"自动翻译"后网页与翻译服务器之间的通信信息.在type栏下的第一个选项中,其值为xhr(XMLHttpRequest)的缩写,也就是通信所返回的内容等</p>
+            <div class="div_img" id="div_img_1">
+                <img src="https://cgwh.github.io./otherpages/technology/res/python-pachong-1.png">
+            </div>
+            <p class="p_cnfont">其name属性为"translate?smartResult...点击其就知道其通信的详细信息,如下图:</p>
+            <p class="div_img" id="div_img_2">
+                <img src="https://cgwh.github.io./otherpages/technology/res/python-pachong-2.png">
+            </p>
+            <div class="div_img" id="div_img_3">
+                <img src="https://cgwh.github.io./otherpages/technology/res/python-pachong-3.png">
+            </div>
+            <p class="p_cnfont">观察Headers选项里的信息,可以知道有道翻译的服务器的URL地址,翻译所使用的提交方式(Request Method)为POST方式,及其编码格式为"utf-8"(一般都为utf-8的编码格式)和Data中所需要的数据信息(这里的data信息很简单).这里所需要使用到的内容为:</p>
+            <p class="p_enfont">*General选项里的RequestURL属性的值</p>
+            <p class="p_enfont">*Request Headers选项里的User-Agent属性的值</p>
+            <p class="p_enfont">*Form Data选项里的全部属性及属性值</p>
+            <p class="p_cnfont">知道了以上的信息,就可以进行爬虫操作了</p>
+            <p class="p_cnfont">这里先直接看代码:</p>
+            <p class="p_code" id="p_code_1">
+                import urllib.request
+            </p>
+            <p class="p_code" id="p_code_2">
+                import urllib.parse
+            </p>
+            <p class="p_code" id="p_code_3">import json</p>
+            <p class="p_code" id="p_code_4">while True:</p>
+            <p class="p_code" id="p_code_5">
+                inputStr = input("输入要翻译的内容('q' to Exit):")
+            </p>
+            <p class="p_code" id="p_code_6">
+                if inputStr == 'q':
+            </p>
+            <p class="p_code" id="p_code_7">break;</p>
+            <p class="p_code" id="p_code_8">
+                elif inputStr != "":
+            </p>
+            <p class="p_code" id="p_code_9">
+                url = ('http://fanyi.youdao.com/translate?' +
+            </p>
+            <p class="p_code" id="p_code_10">
+                'smartresult=dict&smartresult=rule&' +
+            </p>
+            <p class="p_code" id="p_code_11">
+                'smartresult=ugc&sessionFrom=dict2.' +
+            </p>
+            <p class="p_code" id="p_code_12">
+                'indexhttp://fanyi.youdao.com/translate?' +
+            </p>
+            <p class="p_code" id="p_code_13">
+                'smartresult=dict&smartresult=rule&' +
+            </p>
+            <p class="p_code" id="p_code_14">
+                'smartresult=ugc&sessionFrom=dict2.index')
+            </p>
+            <p class="p_code" id="p_code_15">
+                head = {}
+            </p>
+            <p class="p_code" id="p_code_16">
+                head['Uset-Agent'] = ('Mozilla/5.0 (X11;' +
+            </p>
+            <p class="p_code" id="p_code_17">
+                'Linux x86_64) AppleWebKit/537.36 (KHTML,' +
+            </p>
+            <p class="p_code" id="p_code_18">
+                'like Gecko) Chrome/54.0.2840.100 Safari/' +
+            </p>
+            <p class="p_code" id="p_code_19">
+                '537.36')
+            </p>
+            <p class="p_code" id="p_code_20">
+                data = {}
+            </p>
+            <p class="p_code" id="p_code_21">
+                data['type'] = 'AUTO'
+            </p>
+            <p class="p_code" id="p_code_22">
+                data['i'] = inputStr
+            </p>
+            <p class="p_code" id="p_code_23">
+                data['doctype'] = 'json'
+            </p>
+            <p class="p_code" id="p_code_24">
+                data['xmlVersion'] = '1.8'
+            </p>
+            <p class="p_code" id="p_code_25">
+                data['keyfrom'] = 'fanyi.web'
+            </p>
+            <p class="p_code" id="p_code_26">
+                data['ue'] = 'UTF-8'
+            </p>
+            <p class="p_code" id="p_code_27">
+                data['action'] = 'FY_BY_CLICKBUTTON'
+            </p>
+            <p class="p_code" id="p_code_28">
+                data['typoResult'] = 'true'
+            </p>
+            <p class="p_code" id="p_code_29">
+                data = urllib.parse.urlencode(data).encode('utf-8')
+            </p>
+            <p class="p_code" id="p_code_30">
+                req = urllib.request.Request(url, data, head)
+            </p>
+            <p class="p_code" id="p_code_31">
+                reponse = urllib.request.urlopen(req)
+            </p>
+            <p class="p_code" id="p_code_32">
+                html = reponse.read().decode('utf-8')
+            </p>
+            <p class="p_code" id="p_code_33">
+                msg = json.loads(html)
+            </p>
+            <p class="p_code" id="p_code_34">
+                translateResultStr = msg['translateResult'][0][0]['tgt']
+            </p>
+            <p class="p_code" id="p_code_35">
+                print(translateResultStr)
+            </p>
+            <p class="p_code" id="p_code_36">
+                if 'smartResult' in msg:
+            </p>
+            <p class="p_code" id="p_code_37">
+                smartEntriesResultStr = msg['smartResult']['entries']
+            </p>
+            <p class="p_code" id="p_code_38">
+                for index in smartEntriesResultStr:
+            </p>
+            <p class="p_code" id="p_code_39">
+                if index != "":
+            </p>
+            <p class="p_code" id="p_code_40">print(index)</p>
+            <p class="p_code" id="p_code_41">else:</p>
+            <p class="p_code" id="p_code_42">
+                print("Input Error")
+            </p>
+            <p class="p_cnfont">运行如图:</p>
+            <div class="div_img" id="div_img_4">
+                <img src="https://cgwh.github.io./otherpages/technology/res/python-pachong-4.png">
+            </div>
+            <p class="p_cnfont">代码中,url和head['Uesr-Agent']的定义可以用一行来写,不过这里考虑到一行太长,所以使用了分行来写</p>
+            <p class="p_cnfont">程序中head['User-Agent']的使用是为了隐藏有脚本运行而产生的表示,若使用这个值的属性,那么在服务器中显示的就为ip地址是通过web浏览器来人工访问,而若未使用此属性,那么服务器那端所获取的则为此ip是通过python脚本来访问</p>
+        </div>
+    </div>
+    <div id="div_container_bt">
+            <a href="https://cgwh.github.io/otherpages/technology/python/python.html">
+                <button id="bt_container_bt">返回</button>
+            </a>
+    </div>
+</body>
+</html>

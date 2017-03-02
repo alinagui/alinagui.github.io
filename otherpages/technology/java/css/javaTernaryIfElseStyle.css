@@ -1,0 +1,57 @@
+body{
+    height: 1150px;
+}
+#div_container{
+    height: 85%;
+    
+}
+
+#div_top_text1_1{
+    width: 30px;
+/*    background-color: green;*/
+    margin-left: 10%;
+}
+#div_top_text1_2{
+    width: 60px;
+}
+#div_top_text1_3{
+    width: 26px;
+}
+
+
+#div_container_bt{
+    height: 15%;
+}
+#bt_container_bt{
+    height: 23%;
+    margin-top: 2%;
+}
+
+.p_cnfont{
+    font-size: 90%;
+    margin-top: 0.7%;
+    letter-spacing: 0.8px;
+}
+.p_enfont{
+    font-size: 90%;
+    text-indent: 5%;
+}    
+.p_code{
+    font-size: 85%;
+}
+#p_code_1,#p_code_17{
+    text-indent: 28%;
+}
+#p_code_2,#p_code_6,#p_code_7,#p_code_9,#p_code_10,#p_code_16{
+    text-indent: 31%;
+}
+#p_code_3,#p_code_4,#p_code_5,#p_code_8,#p_code_11,#p_code_13,
+#p_code_15{
+    text-indent: 34%;
+}
+#p_code_12,#p_code_14{
+    text-indent: 37%;
+}
+#p_code_output_1,#p_code_output_2,#p_code_output_3{
+    text-indent: 5%;
+}

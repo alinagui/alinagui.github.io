@@ -1,0 +1,587 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #1b2d41;
+}
+@media screen and (min-width: 1240px){
+    #d_content{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #d_content_portroit{
+        width: 23%;
+        height: 99%;
+    }
+    #d_content_portroit_circle{
+        width: 95.5%;
+        height: 95.5%;
+    }
+    #d_content_portroit_circle:hover{
+        width: 95.5%;
+        height: 95.5%;
+    }
+    #d_content_show{
+        width: 80%;
+        height: 95%;
+        left: 10%;
+        top: 5%;
+    }
+    #p_name{
+        font-size: 260%;
+    }
+    #d_content_show_signature{
+        width: 70%;
+        height: 14%;
+        left: 15%;
+        top: 5%;
+    }
+    #p_signature{
+        font-size: 160%;
+/*        letter-spacing: 0.8px;*/
+    }
+    #div_p_introduce{
+        width: 70%;
+        height: 64%;
+        left: 15%;
+        top:  20%;
+    }
+    .p_introduce{
+        font-size: 116%;
+        text-indent: 6%;
+        letter-spacing: 1.5px;
+        line-height: 200%;
+        position: absolute;
+        top: 1.5%;
+    }
+    #d_content_below_bt{
+        width: 22%;
+        height: 25%;
+        top: 30%;
+        left: 39%;
+    }
+    .bt_text{
+        font-size: 140%;
+    }
+}
+@media screen and (min-width: 1020px) and (max-width: 1240px){
+    #d_content{
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #d_content_portroit{
+        width: 22%;
+        height: 90%;
+        position: relative;
+        top: 4%;
+    }
+    #d_content_portroit_circle{
+        width: 95.5%;
+        height: 95.5%;
+    }
+     #d_content_portroit_circle:hover{
+        width: 95.5%;
+        height: 95.5%;
+    }
+    #d_content_show{
+        width: 85%;
+        height: 90%;
+        left: 7.5%;
+        top: 5%;
+    }
+    #d_content_show_signature{
+        width: 70%;
+        height: 14%;
+        left: 15%;
+        top: 5%;
+    }
+    #p_name{
+        font-size: 230%;
+    }
+    #p_signature{
+        font-size: 150%;
+    }
+    #div_p_introduce{
+        width: 70%;
+        height: 64%;
+        left: 15%;
+        top: 21%;
+    }
+    .p_introduce{
+        font-size: 113%;
+        text-indent: 8%;
+        letter-spacing: 1.5px;
+        line-height: 180%;
+        top: 2%;
+    }
+     #d_content_below_bt{
+        width: 22%;
+        height: 25%;
+        top: 35%;
+        left: 39%;
+    }
+    .bt_text{
+        font-size: 135%;
+    }
+}
+@media screen and (min-width: 960px) and (max-width: 1020px){
+    #d_content{
+        width: 86%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #d_content_portroit{
+        width: 25%;
+        height: 85%;
+        position:relative;
+        top: 7%;
+    }
+     #d_content_portroit_circle{
+        width: 95.5%;
+        height: 95.5%;
+    }
+     #d_content_portroit_circle:hover{
+        width: 95.5%;
+        height: 95.5%;
+    }
+    #d_content_show{
+        width: 87%;
+        height: 90%;
+        left: 6.5%;
+        top: 5%;
+    }
+    #d_content_show_signature{
+        width: 70%;
+        height: 13%;
+        left: 15%;
+        top: 5%;
+    }
+    #p_name{
+        font-size: 200%;
+    }
+    #p_signature{
+        font-size: 140%;
+    }
+    #div_p_introduce{
+        width: 70%;
+        height: 65%;
+        left: 15%;
+        top: 20%;
+    }
+    .p_introduce{
+        font-size: 108%;
+        text-indent: 8%;
+        letter-spacing: 1.5px;
+        line-height: 200%;
+        top: 2.5%;
+    }
+    #d_content_below_bt{
+        width: 22%;
+        height: 25%;
+        top: 35%;
+        left: 39%;
+    }
+    .bt_text{
+        font-size: 125%;
+    }
+}
+@media screen and (min-width: 720px) and (max-width: 960px){
+    #d_content{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #d_content_portroit{
+        width: 20%;
+        height: 60%;
+        position: relative;
+        top: 15%;
+    }
+     #d_content_portroit_circle{
+        width: 94.6%;
+        height: 93.5%;
+    }
+     #d_content_portroit_circle:hover{
+        width: 94.6%;
+        height: 95.5%;
+    }
+    #d_content_show{
+        width: 90%;
+        height: 90%;
+        left: 5%;
+        top: 5%;
+    }
+    #d_content_show_signature{
+        width: 70%;
+        height: 12%;
+        left: 15%;
+        top: 5%;
+    }
+    #p_name{
+        font-size: 190%;
+    }
+    #p_signature{
+        font-size: 130%;
+    }
+    #div_p_introduce{
+        width: 70%;
+        height: 70%;
+        left: 15%;
+        top: 16%;
+    }
+    .p_introduce{
+        font-size: 103%;
+        text-indent: 7%;
+        letter-spacing: 1.5px;
+        line-height: 200%;
+        top: 1.5%;
+    }
+    #d_content_below_bt{
+        width: 22%;
+        height: 20%;
+        top: 35%;
+        left: 39%;
+    }
+    .bt_text{
+        font-size: 128%;
+    }
+}
+@media screen and (min-width: 560px) and (max-width: 720px){
+     #d_content{
+        width: 100%;
+    }
+    #d_content_portroit{
+        width: 26%;
+        height: 62%;
+        position: relative;
+        top: 20%;
+    }
+     #d_content_portroit_circle{
+        width: 90.5%;
+        height: 93%;
+    }
+     #d_content_portroit_circle:hover{
+        width: 90.5%;
+        height: 93%;
+    }
+    #d_content_show{
+        width: 95%;
+        height: 90%;
+        left: 2.5%;
+        top: 5%;
+    }
+    #d_content_show_signature{
+        width: 80%;
+        height: 10.6%;
+        left: 10%;
+        top: 5%;
+    }
+    #p_name{
+        font-size: 190%;
+    }
+    #p_signature{
+        font-size: 120%;
+    }
+    #div_p_introduce{
+        width: 80%;
+        height: 65%;
+        left: 10%;
+        top: 23%;
+    }
+    .p_introduce{
+        font-size: 94%;
+        text-indent: 7%;
+        letter-spacing: 1.5px;
+        line-height: 180%;
+        top: 5%;
+    }
+    #d_content_below_bt{
+        width: 22%;
+        height: 20%;
+        top: 35%;
+        left: 39%;
+    }
+    .bt_text{
+        font-size: 120%;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 560px){
+    #d_content{
+        width: 100%;
+    }
+    #d_content_portroit{
+        width: 26%;
+        height: 62%;
+        position: relative;
+        top: 20%;
+    }
+     #d_content_portroit_circle{
+        width: 98.5%;
+        height: 90%;
+    }
+     #d_content_portroit_circle:hover{
+        width: 98.5%;
+        height: 90%;
+    }
+    #d_content_show{
+        width: 95%;
+        height: 90%;
+        left: 2.5%;
+        top: 5%;
+    }
+    #d_content_show_signature{
+        width: 80%;
+        height: 10.6%;
+        left: 10%;
+        top: 5%;
+    }
+    #p_name{
+        font-size: 190%;
+    }
+    #p_signature{
+        font-size: 120%;
+    }
+    #div_p_introduce{
+        width: 80%;
+        height: 65%;
+        left: 10%;
+        top: 23%;
+    }
+    .p_introduce{
+        font-size: 94%;
+        text-indent: 7%;
+        letter-spacing: 1.5px;
+        line-height: 180%;
+        top: 5%;
+    }
+    #d_content_below_bt{
+        width: 22%;
+        height: 20%;
+        top: 35%;
+        left: 39%;
+    }
+    .bt_text{
+        font-size: 220%;
+    }
+}
+@media screen and (max-width: 480px){
+    #d_content{
+        width: 100%;
+    }
+    #d_content_portroit{
+        width: 36%;
+        height: 55%;
+        position: relative;
+        top: 20%;
+    }
+     #d_content_portroit_circle{
+        width: 88%;
+        height: 92%;
+    }
+     #d_content_portroit_circle:hover{
+        width: 88%;
+        height: 92%;
+    }
+    #d_content_show{
+        width: 100%;
+        height: 90%;
+        top: 5%;
+    }
+    #d_content_show_signature{
+        width: 96%;
+        height: 10%;
+        left: 2%;
+        top: 5%;
+    }
+    #p_name{
+        font-size: 160%;
+    }
+    #p_signature{
+        font-size: 110%;
+    }
+     #div_p_introduce{
+        width: 96%;
+        height: 69%;
+        top: 19%;
+        left: 2%;
+    }
+    .p_introduce{
+        font-size: 85%;
+        text-indent: 7%;
+        letter-spacing: 1.5px;
+        line-height: 200%;
+        top: 8%;
+    }
+    #d_content_below_bt{
+        width: 32%;
+        height: 18%;
+        top: 35%;
+        left: 34%;
+    }
+    .bt_text{
+        font-size: 110%;
+    }
+}
+#d_content{
+/*    background-color: aqua;*/
+}
+#d_content_above,#d_content_middle,#d_content_below{
+    width: 100%;
+}
+
+#d_content_above{
+    height: 30%;
+/*    background-color: chartreuse;*/
+}
+
+#d_content_middle{
+    height: 40%;
+/*    background-color: red;*/
+    position: relative;
+}
+#d_content_below{
+    height: 30%;
+/*    background-color: yellow;*/
+    position: relative;
+    top: 0%;
+}
+#d_content_portroit{
+    margin-left: auto;
+    margin-right: auto;
+/*    border: 1px solid black;*/
+/*    background-color: transparent;*/
+}
+#d_content_portroit_circle{
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+    position: relative;
+    top: 0px;
+}
+.next_img,.first_img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.first_img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+}
+#d_content_portroit_circle:hover .first_img{
+    opacity: 0;
+}
+#d_content_show{
+    position: absolute;
+/*    background-color: deeppink;*/
+}
+#p_name{
+    color: #ffffff;
+    font-family: sans-serif;
+    text-align: center;
+}
+#d_content_show_signature{
+/*    background-color: darkmagenta;*/
+    position: relative;
+    border-bottom: 2px solid #ffffff;
+}
+#p_signature{
+    color: #ebebeb;
+    font-family: sans-serif;
+    text-align: center;
+}
+#div_p_introduce{
+/*    background-color: chocolate;*/
+    position: relative;
+}
+#div_p_introduce p{
+    color: #d3d5c8;
+    font-family: sans-serif;
+    position: absolute;
+    text-align: center;
+    
+}
+span{
+    position: absolute;
+    display: block;
+    background-color: #16c4a1;
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -o-transition: 1s ease;
+    -ms-transition: 1s ease;
+}
+.line_top{
+    width: 0px;
+    height: 2px;
+    left: 0px;
+    top: -2px;
+}
+#div_p_introduce:hover .line_top{
+    width: 100.2%;
+    height: 2px;
+}
+.line_left{
+    width: 2px;
+    height: 0px;
+    left: -2px;
+    top: -2px;
+}
+#div_p_introduce:hover .line_left{
+    height: 102%;
+}
+.line_right{
+    width: 2px;
+    height: 0px;
+    right: -2px;
+    bottom: -2px;
+}
+#div_p_introduce:hover .line_right{
+    height: 102%;
+}
+.line_bottom{
+    width: 0px;
+    height: 2px;
+    right: -2px;
+    bottom: -2px;
+}
+#div_p_introduce:hover .line_bottom{
+    width: 100.5%;
+}
+#d_content_below_bt{
+/*    background-color: black;*/
+    position: relative;
+}
+#bt_into{
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-width: 5%;
+    border-color: #16c4a1;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+}
+.bt_text{
+    color: #d3d5c8;
+    font-family: sans-serif;
+}
+#bt_into:hover{
+    box-shadow: 0px 0px 20px #ffffff;
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -mos-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+}
