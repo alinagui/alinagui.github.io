@@ -139,15 +139,15 @@ function choiceShow() {
     var presentTime = new Date().getHours();
     var showText;
     if(presentTime >= 5 && presentTime <10){
-        showText = "憨头 , 早上好";
+        showText = "Доброе утро , 早上好";
     }else if(presentTime >= 10 && presentTime < 13){
-        showText = "憨头 , 中午好";
+        showText = "Добрый день , 中午好";
     }else if(presentTime >= 13 && presentTime < 19){
-        showText = "憨头 , 下午好";
+        showText = "Добрый день , 下午好";
     }else if(presentTime >= 19 && presentTime < 24){
-        showText = "憨头 , 晚上好"
+        showText = "добрый вечер , 晚上好"
     }else{
-        showText = "憨头 , 你好"
+        showText = " Привет , 你好"
     }
     return showText;
 }
